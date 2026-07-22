@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Mens Gym Wear | MOM Apparel</title>
+    <meta name="description" content="Shop mens training gear from MOM Apparel — t-shirts, shorts, hoodies and tanks built for the gym floor. Fast dispatch from Johannesburg, shipping SA-wide.">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="sameline-shared.css">
+    <link rel="stylesheet" href="Product.css">
+</head>
+<body>
+
+<header id="header">
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="Mans-Product/Man1.jpg" alt="MOM Apparel" class="nav-logo-img">
+            <div class="nav-logo-text">
+                <span class="logo-name">MOM</span>
+                <span class="logo-tagline">Mother of Gains</span>
+            </div>
+        </a>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="Mens.html" class="nav-link active">Mens</a></li>
+            <li><a href="Womens.html" class="nav-link">Womens</a></li>
+            <li><a href="Checkout.html" class="nav-link">Checkout</a></li>
+        </ul>
+        <button type="button" class="cart-nav-trigger" aria-label="Open cart">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="cart-count-badge">0</span>
+        </button>
+        <a href="#product-detail" class="nav-cta">Quick Buy</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Mens.html">Mens</a></li>
+            <li><a href="Womens.html">Womens</a></li>
+            <li><a href="Checkout.html" class="cream-link">Checkout</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="page-hero-bg">
+            <div class="page-hero-arc-1"></div>
+            <div class="page-hero-arc-2"></div>
+        </div>
+        <div class="section-content page-hero-content">
+            <span class="eyebrow">Shop All MANS WEAR</span>
+            <h1 class="page-hero-title">Pick Your <em>Kit GENTS</em></h1>
+            <p class="page-hero-sub">Tap a product to view sizing, colours and full details — then send it straight to checkout.</p>
+        </div>
+    </section>
+
+    <!-- CATALOG -->
+    <section class="catalog-section">
+        <div class="section-content">
+            <div class="catalog-grid" id="catalogGrid"></div>
+        </div>
+    </section>
+
+    <!-- PRODUCT DETAIL -->
+    <section class="product-detail-section" id="product-detail">
+        <div class="section-content product-detail-grid">
+
+            <!-- Gallery -->
+            <div class="pd-gallery">
+                <div class="pd-main-image">
+                    <img id="pdMainImg" src="Mans-Product/Man1.jpg" alt="Product image">
+                </div>
+                <div class="pd-thumbs" id="pdThumbs"></div>
+            </div>
+
+            <!-- Info -->
+            <div class="pd-info">
+                <span class="eyebrow" id="pdCategory">Leggings</span>
+                <h2 class="pd-title" id="pdTitle">Sculpt High-Waist Leggings</h2>
+                <div class="pd-price" id="pdPrice">R450</div>
+
+                <div class="pd-option-group">
+                    <label>Colour: <span id="pdColourName">Black</span></label>
+                    <div class="pd-swatches" id="pdColours"></div>
+                </div>
+
+                <div class="pd-option-group">
+                    <label>Size</label>
+                    <div class="pd-sizes" id="pdSizes"></div>
+                    <p class="pd-size-error-msg" id="pdSizeError">Please select a size before buying.</p>
+                    <a href="#size-guide" class="pd-size-guide">View size guide</a>
+                </div>
+
+                <div class="pd-option-group">
+                    <label>Quantity</label>
+                    <div class="pd-qty">
+                        <button type="button" id="pdQtyMinus">−</button>
+                        <span id="pdQtyVal">1</span>
+                        <button type="button" id="pdQtyPlus">+</button>
+                    </div>
+                </div>
+
+                <div class="pd-action-row">
+                    <button class="btn-outline pd-addcart-btn" id="pdAddCartBtn" type="button">
+                        <i class="fa-solid fa-cart-plus"></i> Add to Cart
+                    </button>
+                    <button class="submit-btn pd-buy-btn" id="pdBuyBtn" type="button">
+                        Buy Now <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+                <p class="form-note"><i class="fa-solid fa-lock"></i> Add multiple items to your cart, or buy now to check out this item straight away.</p>
+
+                <div class="pd-accordion" id="size-guide">
+                    <details open>
+                        <summary>Details</summary>
+                        <p id="pdDetails">Description loading…</p>
+                    </details>
+                    <details>
+                        <summary>Fabric & Care</summary>
+                        <p>Squat-proof 4-way stretch blend. Cold machine wash, hang dry, do not tumble dry or iron directly on prints.</p>
+                    </details>
+                    <details>
+                        <summary>Shipping & Returns</summary>
+                        <p>Free delivery on orders over R650. Dispatched within 48 hours from Johannesburg. Unworn items with tags can be exchanged within 14 days.</p>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <img src="Mans-Product/Man5.jpg" alt="MOM Apparel" class="footer-logo-img">
+            <div class="footer-brand-text">
+                <span class="footer-name">MOM</span>
+                <span class="footer-tag">Apparel</span>
+            </div>
+        </div>
+        <nav class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="Mens.html">Mens</a>
+            <a href="Womens.html">Womens</a>
+            <a href="Checkout.html">Checkout</a>
+        </nav>
+        <p class="footer-copy">© 2026 MOM Apparel<br>Johannesburg, South Africa</p>
+    </div>
+</footer>
+
+<script>
+const PRODUCTS = {
+    "tshirt-shorts": {
+        name: "T-shirt $ shorts",
+        category: "T-shirt · Squat-Proof",
+        price: 450,
+        sizes: ["XS","S","M","L","XL","XXL"],
+        colours: [
+            { name: "Black", hex: "#1a1a1a" },
+            { name: "Charcoal", hex: "#4a4a4a" },
+            { name: "Olive", hex: "#5c5f3a" }
+        ],
+        images: ["Mans-Product/Man3.jpg","Mans-Product/Man2.jpg","Mans-Product/Man1.jpg"],
+        details: "High-waist leggings with a wide comfort band that won't roll down mid-set. Squat-proof, opaque even under gym lighting, with a hidden waistband pocket for a key or card."
+    },
+    "training-hoodie": {
+        name: "Oversized Training Hoodie",
+        category: "Hoodie · Heavyweight",
+        price: 650,
+        sizes: ["S","M","L","XL","XXL"],
+        colours: [
+            { name: "Black", hex: "#1a1a1a" },
+            { name: "Grey", hex: "#8a8a8a" },
+            { name: "Navy", hex: "#0f2d5e" }
+        ],
+        images: ["Mans-Product/Man4.jpg","Mans-Product/Man1.jpg","Mans-Product/Man2.jpg"],
+        details: "Oversized fit, 400gsm brushed fleece hoodie built for warm-ups and walking out the gym. Kangaroo pocket, ribbed cuffs, drawcord hood."
+    },
+    "performance-tank": {
+        name: "Performance Tank Top",
+        category: "Tank · Lightweight",
+        price: 320,
+        sizes: ["XS","S","M","L","XL","XXL"],
+        colours: [
+            { name: "Black", hex: "#1a1a1a" },
+            { name: "White", hex: "#f4f0e8" },
+            { name: "Sand", hex: "#c9b78a" }
+        ],
+        images: ["Mans-Product/Man1.jpg","Mans-Product/Man2.jpg","Mans-Product/Man3.jpg"],
+        details: "Drop-arm racerback tank in an ultralight breathable mesh blend. Built for range of motion on push day without any fabric bunching."
+    },
+    "flex-shorts": {
+        name: "Flex Training Shorts",
+        category: "Shorts · 7-Inch Inseam",
+        price: 380,
+        sizes: ["S","M","L","XL","XXL"],
+        colours: [
+            { name: "Black", hex: "#1a1a1a" },
+            { name: "Charcoal", hex: "#4a4a4a" },
+            { name: "Army Green", hex: "#4b5a3a" }
+        ],
+        images: ["Mans-Product/Man4.jpg","Mans-Product/Man3.jpg","Mans-Product/Man1.jpg"],
+        details: "7-inch inseam training shorts with a built-in liner and zip pocket. Four-way stretch side panels for deep squats and lunges."
+    }
+};
+
+let state = { key: null, colour: 0, size: null, qty: 1 };
+
+function renderCatalog() {
+    const grid = document.getElementById('catalogGrid');
+    grid.innerHTML = '';
+    Object.entries(PRODUCTS).forEach(([key, p]) => {
+        const card = document.createElement('div');
+        card.className = 'catalog-card';
+        card.innerHTML = `
+            <div class="catalog-img"><img src="${p.images[0]}" alt="${p.name}"></div>
+            <div class="catalog-body">
+                <span class="car-type">${p.category}</span>
+                <h3 class="car-name">${p.name}</h3>
+                <div class="catalog-bottom">
+                    <span class="price-num">R${p.price}</span>
+                    <button class="hire-btn select-product-btn" data-key="${key}">View Product</button>
+                </div>
+            </div>`;
+        grid.appendChild(card);
+    });
+    document.querySelectorAll('.select-product-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            selectProduct(btn.dataset.key);
+            document.getElementById('product-detail').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+}
+
+function selectProduct(key) {
+    const p = PRODUCTS[key];
+    if (!p) return;
+    state = { key, colour: 0, size: null, qty: 1 };
+    document.getElementById('pdCategory').textContent = p.category;
+    document.getElementById('pdTitle').textContent = p.name;
+    document.getElementById('pdPrice').textContent = 'R' + p.price;
+    document.getElementById('pdDetails').textContent = p.details;
+    document.getElementById('pdMainImg').src = p.images[0];
+    document.getElementById('pdMainImg').alt = p.name;
+
+    const thumbs = document.getElementById('pdThumbs');
+    thumbs.innerHTML = '';
+    p.images.forEach((img, i) => {
+        const t = document.createElement('img');
+        t.src = img; t.alt = p.name + ' view ' + (i+1);
+        t.className = i === 0 ? 'active' : '';
+        t.addEventListener('click', () => {
+            document.getElementById('pdMainImg').src = img;
+            thumbs.querySelectorAll('img').forEach(x => x.classList.remove('active'));
+            t.classList.add('active');
+        });
+        thumbs.appendChild(t);
+    });
+
+    const coloursEl = document.getElementById('pdColours');
+    coloursEl.innerHTML = '';
+    p.colours.forEach((c, i) => {
+        const sw = document.createElement('button');
+        sw.type = 'button';
+        sw.className = 'swatch' + (i === 0 ? ' active' : '');
+        sw.style.background = c.hex;
+        sw.title = c.name;
+        sw.addEventListener('click', () => {
+            state.colour = i;
+            document.getElementById('pdColourName').textContent = c.name;
+            coloursEl.querySelectorAll('.swatch').forEach(s => s.classList.remove('active'));
+            sw.classList.add('active');
+        });
+        coloursEl.appendChild(sw);
+    });
+    document.getElementById('pdColourName').textContent = p.colours[0].name;
+
+    const sizesEl = document.getElementById('pdSizes');
+    sizesEl.innerHTML = '';
+    p.sizes.forEach(s => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.className = 'size-btn';
+        b.textContent = s;
+        b.addEventListener('click', () => {
+            state.size = s;
+            sizesEl.querySelectorAll('.size-btn').forEach(x => x.classList.remove('active'));
+            b.classList.add('active');
+            sizesEl.classList.remove('size-error');
+            document.getElementById('pdSizeError').classList.remove('visible');
+        });
+        sizesEl.appendChild(b);
+    });
+
+    document.getElementById('pdQtyVal').textContent = '1';
+    sizesEl.classList.remove('size-error');
+    document.getElementById('pdSizeError').classList.remove('visible');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderCatalog();
+    const firstKey = Object.keys(PRODUCTS)[0];
+
+    document.getElementById('pdQtyMinus').addEventListener('click', () => {
+        state.qty = Math.max(1, state.qty - 1);
+        document.getElementById('pdQtyVal').textContent = state.qty;
+    });
+    document.getElementById('pdQtyPlus').addEventListener('click', () => {
+        state.qty = Math.min(10, state.qty + 1);
+        document.getElementById('pdQtyVal').textContent = state.qty;
+    });
+
+    function validateSizeSelected() {
+        if (!state.size) {
+            document.getElementById('pdSizes').classList.add('size-error');
+            document.getElementById('pdSizeError').classList.add('visible');
+            document.getElementById('pdSizes').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            return false;
+        }
+        return true;
+    }
+
+    function buildCartItem() {
+        const p = PRODUCTS[state.key];
+        return {
+            key: 'mens-' + state.key,
+            name: p.name,
+            price: p.price,
+            colour: p.colours[state.colour].name,
+            size: state.size,
+            qty: state.qty,
+            image: p.images[0]
+        };
+    }
+
+    function showToast(message) {
+        let toast = document.getElementById('pdToast');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.id = 'pdToast';
+            toast.className = 'pd-toast';
+            document.body.appendChild(toast);
+        }
+        toast.innerHTML = '<i class="fa-solid fa-circle-check"></i> ' + message;
+        toast.classList.add('visible');
+        clearTimeout(window._pdToastTimer);
+        window._pdToastTimer = setTimeout(() => toast.classList.remove('visible'), 2500);
+    }
+
+    document.getElementById('pdAddCartBtn').addEventListener('click', () => {
+        if (!validateSizeSelected()) return;
+        addToCart(buildCartItem());
+        showToast('Added to cart');
+    });
+
+    document.getElementById('pdBuyBtn').addEventListener('click', () => {
+        if (!validateSizeSelected()) return;
+        addToCart(buildCartItem());
+        window.location.href = 'Checkout.html';
+    });
+
+    // Header
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 60));
+    const tb = document.getElementById('mobileToggle'), mn = document.getElementById('mobileNav');
+    tb.addEventListener('click', () => { tb.classList.toggle('open'); mn.classList.toggle('open'); });
+    mn.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { tb.classList.remove('open'); mn.classList.remove('open'); }));
+
+    // Pre-select from URL if index.html linked with ?item=
+    const params = new URLSearchParams(window.location.search);
+    const urlItem = params.get('item');
+    selectProduct(urlItem && PRODUCTS[urlItem] ? urlItem : firstKey);
+
+    // Reveal
+    const io = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.1 });
+    document.querySelectorAll('.catalog-card, .pd-gallery, .pd-info').forEach(el => { el.classList.add('reveal'); io.observe(el); });
+});
+</script>
+<script src="cart.js"></script>
+</body>
+</html>
