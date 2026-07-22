@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | MOM Apparel</title>
+    <meta name="description" content="Complete your MOM Apparel order. We confirm your order and payment method by phone or email within 2 hours.">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="sameline-shared.css">
+    <link rel="stylesheet" href="Checkout.css">
+
+</head>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init({
+    publicKey: "OIpobcGu-x3f5L92s",
+});
+</script>
+
+<body>
+
+<header id="header">
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo">
+            <img src="Womans-Product/Woman7.jpg" alt="MOM Apparel" class="nav-logo-img">
+            <div class="nav-logo-text">
+                <span class="logo-name">MOM</span>
+                <span class="logo-tagline">Mother of Gains</span>
+            </div>
+        </a>
+        <ul class="nav-menu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="Mens.html" class="nav-link">Mens</a></li>
+            <li><a href="Womens.html" class="nav-link">Womens</a></li>
+            <li><a href="Checkout.html" class="nav-link active">Checkout</a></li>
+        </ul>
+        <button type="button" class="cart-nav-trigger" aria-label="Open cart">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="cart-count-badge">0</span>
+        </button>
+        <a href="#checkout-form" class="nav-cta">Checkout</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="mobile-nav" id="mobileNav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Mens.html">Mens</a></li>
+            <li><a href="Womens.html">Womens</a></li>
+            <li><a href="Checkout.html" class="cream-link">Checkout</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+    <section class="page-hero">
+        <div class="page-hero-bg">
+            <div class="page-hero-arc-1"></div>
+            <div class="page-hero-arc-2"></div>
+        </div>
+        <div class="section-content page-hero-content">
+            <span class="eyebrow">Almost There</span>
+            <h1 class="page-hero-title">Complete Your <em>Order</em></h1>
+            <p class="page-hero-sub">Fill in your details below — we'll confirm your order and payment method by phone or email within 2 hours.</p>
+        </div>
+    </section>
+
+    <section class="checkout-section" id="checkout-form">
+        <div class="section-content checkout-grid">
+
+            <!-- Order summary -->
+            <div class="order-summary">
+                <span class="eyebrow">Your Order</span>
+                <h2 class="section-title">Order <em>Summary</em></h2>
+
+                <div class="summary-card" id="summaryCard">
+                    <div class="summary-empty" id="summaryEmpty" style="display:none;">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <p>Your cart is empty.</p>
+                        <a href="Womens.html" class="text-link">Browse products <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <div class="summary-filled" id="summaryFilled" style="display:none;">
+                        <div id="summaryLines"></div>
+                        <div class="summary-row summary-total"><span>Total</span><strong id="sumTotal">R0</strong></div>
+                    </div>
+                </div>
+
+                <div class="hire-trust">
+                    <div class="trust-row"><i class="fa-solid fa-circle-check"></i><span>Response within 2 hours</span></div>
+                    <div class="trust-row"><i class="fa-solid fa-shield-halved"></i><span>Secure, no card details stored on this site</span></div>
+                    <div class="trust-row"><i class="fa-solid fa-truck-fast"></i><span>Dispatched within 48 hours</span></div>
+                    <div class="trust-row"><i class="fa-solid fa-location-dot"></i><span>Johannesburg, shipping SA-wide</span></div>
+                </div>
+
+                <div class="hire-contact-direct">
+                    <span>Prefer to order by phone or WhatsApp?</span>
+                    <a href="tel:+27843212744">+27 84 321 2744</a>
+                </div>
+            </div>
+
+            <!-- Checkout form -->
+            <!-- Checkout form -->
+<form class="hire-form-box" id="checkoutForm">
+
+    <!-- Honeypot field: hidden from real users, bots often fill every field -->
+    <div style="position:absolute; left:-9999px; opacity:0;" aria-hidden="true">
+        <label for="website">Leave this field blank</label>
+        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+    </div>
+
+    <div class="form-group">
+        <label>Full Name</label>
+        <input
+            type="text"
+            id="fullName"
+            name="name"
+            placeholder="Your full name"
+            required>
+    </div>
+
+    <div class="form-row">
+
+        <div class="form-group">
+            <label>Email Address</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@email.com"
+                required>
+        </div>
+
+        <div class="form-group">
+            <label>Phone Number</label>
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+27 00 000 0000"
+                required>
+        </div>
+
+    </div>
+
+    <div class="form-group">
+        <label>Delivery Address</label>
+        <textarea
+            id="address"
+            name="address"
+            rows="3"
+            placeholder="Street, suburb, city, postal code"
+            required></textarea>
+    </div>
+
+    <div class="form-group">
+        <label>Preferred Payment / Contact Method</label>
+        <select id="fPayment" name="paymentMethod">
+            <option value="EFT / Bank Transfer">EFT / Bank Transfer</option>
+            <option value="Instant EFT (Payfast / Ozow)">Instant EFT (Payfast / Ozow)</option>
+            <option value="Cash on Delivery">Cash on Delivery</option>
+            <option value="WhatsApp me to arrange payment">WhatsApp me to arrange payment</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>Additional Notes</label>
+        <textarea
+            id="details"
+            name="notes"
+            rows="3"
+            placeholder="Anything else we should know..."></textarea>
+    </div>
+
+    <button type="submit" class="submit-btn">
+        Send Order Request <i class="fa-solid fa-arrow-right"></i>
+    </button>
+
+    <p class="form-note">
+        <i class="fa-solid fa-lock"></i>
+        Your details are kept private and secure.
+    </p>
+
+</form>
+
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <img src="Mans-Product/Man4.jpg" alt="MOM Apparel" class="footer-logo-img">
+            <div class="footer-brand-text">
+                <span class="footer-name">MOM</span>
+                <span class="footer-tag">Apparel</span>
+            </div>
+        </div>
+        <nav class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="Mens.html">Mens</a>
+            <a href="Womens.html">Womens</a>
+            <a href="Checkout.html">Checkout</a>
+        </nav>
+        <p class="footer-copy">© 2026 MOM Apparel<br>Johannesburg, South Africa</p>
+    </div>
+</footer>
+
+<script src="cart.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 60));
+    const tb = document.getElementById('mobileToggle'), mn = document.getElementById('mobileNav');
+    tb.addEventListener('click', () => { tb.classList.toggle('open'); mn.classList.toggle('open'); });
+    mn.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { tb.classList.remove('open'); mn.classList.remove('open'); }));
+
+    // Render order summary from the cart (set on Mens.html / Womens.html)
+    function renderOrderSummary() {
+        const cart = getCart();
+        const empty = document.getElementById('summaryEmpty');
+        const filled = document.getElementById('summaryFilled');
+        const linesEl = document.getElementById('summaryLines');
+        const submitBtn = document.querySelector('#checkoutForm .submit-btn');
+
+        if (cart.length === 0) {
+            empty.style.display = 'block';
+            filled.style.display = 'none';
+            if (submitBtn) submitBtn.disabled = true;
+            return;
+        }
+
+        empty.style.display = 'none';
+        filled.style.display = 'block';
+        if (submitBtn) submitBtn.disabled = false;
+
+        linesEl.innerHTML = cart.map(line => {
+            const id = lineId(line);
+            return `
+            <div class="summary-line" data-id="${id}">
+                <img src="${line.image}" alt="${line.name}" class="summary-line-img">
+                <div class="summary-line-info">
+                    <span class="summary-line-name">${line.name}</span>
+                    <span class="summary-line-meta">${line.colour} · ${line.size}</span>
+                    <div class="summary-line-qty">
+                        <button type="button" class="sum-qty-minus" data-id="${id}">−</button>
+                        <span>${line.qty}</span>
+                        <button type="button" class="sum-qty-plus" data-id="${id}">+</button>
+                    </div>
+                </div>
+                <div class="summary-line-right">
+                    <span class="summary-line-price">R${line.price * line.qty}</span>
+                    <button type="button" class="summary-line-remove" data-id="${id}" aria-label="Remove"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            </div>`;
+        }).join('');
+
+        document.getElementById('sumTotal').textContent = 'R' + cartTotal();
+
+        linesEl.querySelectorAll('.sum-qty-plus').forEach(btn => btn.addEventListener('click', () => {
+            const line = getCart().find(l => lineId(l) === btn.dataset.id);
+            if (line) updateCartQty(btn.dataset.id, line.qty + 1);
+            renderOrderSummary();
+        }));
+        linesEl.querySelectorAll('.sum-qty-minus').forEach(btn => btn.addEventListener('click', () => {
+            const line = getCart().find(l => lineId(l) === btn.dataset.id);
+            if (line) {
+                if (line.qty <= 1) removeFromCart(btn.dataset.id);
+                else updateCartQty(btn.dataset.id, line.qty - 1);
+            }
+            renderOrderSummary();
+        }));
+        linesEl.querySelectorAll('.summary-line-remove').forEach(btn => btn.addEventListener('click', () => {
+            removeFromCart(btn.dataset.id);
+            renderOrderSummary();
+        }));
+    }
+
+    renderOrderSummary();
+
+  
+
+    // Reveal
+    const io = new IntersectionObserver(entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.1 });
+    document.querySelectorAll('.order-summary, .hire-form-box').forEach(el => { el.classList.add('reveal'); io.observe(el); });
+});
+</script>
+<script src="message.js"></script>
+</body>
+</html>
